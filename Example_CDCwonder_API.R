@@ -86,6 +86,6 @@ xml_find_all(query_result, ".//response/data-table/r") %>%
       as.list() %>% 
       setNames(sprintf("V%d", 1:length(.))) %>% 
       as.data.frame(stringsAsFactors=FALSE)
-  }) -> df
-
+  }) %>% 
+  tibble::as.tibble()
 

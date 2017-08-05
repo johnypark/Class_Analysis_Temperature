@@ -10,6 +10,7 @@ Objective of this repository is to explore spatial and temporal extent of temper
 
 -   [CDC WONDER: Daily Air Temperatures and Heat Index](http://wonder.cdc.gov/nasa-nldas.html)
 -   [API access](https://wonder.cdc.gov/wonder/help/WONDER-API.html) to CDC WONDER database
+-   [helpful link](http://techqa.info/programming/question/39857253/)
 
 ### Packages used in this study
 
