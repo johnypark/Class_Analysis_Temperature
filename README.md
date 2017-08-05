@@ -13,6 +13,7 @@ Objective of this repository is to explore spatial and temporal extent of temper
 -   [helpful link](http://techqa.info/programming/question/39857253/)
 -   [reference](https://groups.google.com/forum/#!topic/ggplot2/fJAEJgAqb7U)
 -   [mapping](https://www.r-bloggers.com/importing-bathymetry-and-coastline-data-in-r/)
+-   [color pallette](http://colorpalettes.net/color-palette-3376/)
 
 ### Packages used in this study
 
