@@ -12,6 +12,7 @@ Objective of this repository is to explore spatial and temporal extent of temper
 -   [API access](https://wonder.cdc.gov/wonder/help/WONDER-API.html) to CDC WONDER database
 -   [helpful link](http://techqa.info/programming/question/39857253/)
 -   [reference](https://groups.google.com/forum/#!topic/ggplot2/fJAEJgAqb7U)
+-   [mapping](https://www.r-bloggers.com/importing-bathymetry-and-coastline-data-in-r/)
 
 ### Packages used in this study
 
@@ -19,7 +20,7 @@ Objective of this repository is to explore spatial and temporal extent of temper
 -   [github repository](https://github.com/ropensci/rnoaa) for `rnoaa`
 -   `wondr` tool for working with CDC WONDER API in R
 -   [github repository](https://github.com/hrbrmstr/wondr) for `wondr`
--   `maps` `dplyr` `magrittr` `viridis`
+-   `maps` `dplyr` [`magrittr`](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) [`viridis`](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html)
 
 ### Prerequisites
 
@@ -38,3 +39,7 @@ Objective of this repository is to explore spatial and temporal extent of temper
 #### 30 year Average (1978-2011) August Maximum Temperature
 
 ![](Rplot_MAIN_aug_max.jpeg)
+
+#### Testing different colors: Example\_mapsColorPallette.R
+
+![](Rplot01_test_colors.jpeg)
