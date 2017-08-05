@@ -11,6 +11,7 @@ Objective of this repository is to explore spatial and temporal extent of temper
 -   [CDC WONDER: Daily Air Temperatures and Heat Index](http://wonder.cdc.gov/nasa-nldas.html)
 -   [API access](https://wonder.cdc.gov/wonder/help/WONDER-API.html) to CDC WONDER database
 -   [helpful link](http://techqa.info/programming/question/39857253/)
+-   [reference](https://groups.google.com/forum/#!topic/ggplot2/fJAEJgAqb7U)
 
 ### Packages used in this study
 
@@ -18,13 +19,8 @@ Objective of this repository is to explore spatial and temporal extent of temper
 -   [github repository](https://github.com/ropensci/rnoaa) for `rnoaa`
 -   `wondr` tool for working with CDC WONDER API in R
 -   [github repository](https://github.com/hrbrmstr/wondr) for `wondr`
--   `maps` `dplyr` `magrittr`
+-   `maps` `dplyr` `magrittr` `viridis`
 
 ### Prerequisites
 
 -   You need a [web servies token](https://www.ncdc.noaa.gov/cdo-web/token) from NOAA in order to access bulk data
-
-
-### Map result 
-
-![](Rplot_MAIN.jpeg)
