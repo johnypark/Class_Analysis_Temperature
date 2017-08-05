@@ -1,19 +1,6 @@
-##Load Data 
-
-
-##def LoadNOAA
-
-
-##def loadZip_byCounty
-counties <- map_data("county")
-counties.AL<-counties%>%filter(region=="alabama")%>%.[,"subregion"]%>%unique
-
-
-##def loadTemp_fromCDC
-
 
 df<-read_tsv("North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011) (2).txt"
-)
+           )
 
 
 county.state<-strsplit(df$County,split=", ")%>%do.call("rbind",.)
