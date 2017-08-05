@@ -9,11 +9,15 @@ Objective of this repository is to explore spatial and temporal extent of temper
 ### Sources
 
 -   [CDC WONDER: Daily Air Temperatures and Heat Index](http://wonder.cdc.gov/nasa-nldas.html)
+-   [API access](https://wonder.cdc.gov/wonder/help/WONDER-API.html) to CDC WONDER database
 
 ### Packages used in this study
 
 -   `rnoaa` Link to [NOAA R package](https://ropensci.org/blog/2014/03/13/rnoaa/)
 -   [github repository](https://github.com/ropensci/rnoaa) for `rnoaa`
+-   `wondr` tool for working with CDC WONDER API in R
+-   [github repository](https://github.com/hrbrmstr/wondr) for `wondr`
+-   `maps` `dplyr` `magrittr`
 
 ### Prerequisites
 

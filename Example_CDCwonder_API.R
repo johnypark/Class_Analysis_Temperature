@@ -1,0 +1,91 @@
+#test
+devtools::install_github("hrbrmstr/wondr")
+library(wondr)
+library(xml2)
+library(purrr)
+
+
+wondr() %>%
+  add_param("B_1", "D76.V22") %>% 
+  add_param("B_2", "D76.V23") %>% 
+  add_param("B_3", "*None*") %>% 
+  add_param("B_4", "*None*") %>% 
+  add_param("B_5", "*None*") %>% 
+  add_param("F_D76.V1", "*All*") %>% 
+  add_param("F_D76.V10", "*All*") %>% 
+  add_param("F_D76.V2", "*All*") %>% 
+  add_param("F_D76.V27", "*All*") %>% 
+  add_param("F_D76.V9", "*All*") %>% 
+  add_param("I_D76.V1", "*All* (All Dates)") %>% 
+  add_param("I_D76.V10", "*All* (The United States)") %>% 
+  add_param("I_D76.V2", "*All* (All Causes of Death)") %>% 
+  add_param("I_D76.V27", "*All* (The United States)") %>% 
+  add_param("I_D76.V9", "*All* (The United States)") %>% 
+  add_param("M_1", "D76.M1") %>% 
+  add_param("M_2", "D76.M2") %>% 
+  add_param("M_3", "D76.M3") %>% 
+  add_param("O_V10_fmode", "freg") %>% 
+  add_param("O_V1_fmode", "freg") %>% 
+  add_param("O_V27_fmode", "freg") %>% 
+  add_param("O_V2_fmode", "freg") %>% 
+  add_param("O_V9_fmode", "freg") %>% 
+  add_param("O_aar", "aar_none") %>% 
+  add_param("O_aar_pop", "0000") %>% 
+  add_param("O_age", "D76.V52") %>% 
+  add_param("O_javascript", "on") %>% 
+  add_param("O_location", "D76.V9") %>% 
+  add_param("O_precision", "1") %>% 
+  add_param("O_rate_per", "100000") %>% 
+  add_param("O_show_totals", "true") %>% 
+  add_param("O_timeout", "300") %>% 
+  add_param("O_title", "Example2") %>% 
+  add_param("O_ucd", "D76.V22") %>% 
+  add_param("O_urban", "D76.V19") %>% 
+  add_param("VM_D76.M6_D76.V10", "") %>% 
+  add_param("VM_D76.M6_D76.V17", "*All*") %>% 
+  add_param("VM_D76.M6_D76.V1_S", "*All*") %>% 
+  add_param("VM_D76.M6_D76.V7", "*All*") %>% 
+  add_param("VM_D76.M6_D76.V8", "*All*") %>% 
+  add_param("V_D76.V1", "") %>% 
+  add_param("V_D76.V10", "") %>% 
+  add_param("V_D76.V11", "*All*") %>% 
+  add_param("V_D76.V12", "*All*") %>% 
+  add_param("V_D76.V17", "*All*") %>% 
+  add_param("V_D76.V19", "*All*") %>% 
+  add_param("V_D76.V2", "") %>% 
+  add_param("V_D76.V20", "*All*") %>% 
+  add_param("V_D76.V21", "*All*") %>% 
+  add_param("V_D76.V22", "1", "2", "3", "4", "5") %>% 
+  add_param("V_D76.V23", "*All*") %>% 
+  add_param("V_D76.V24", "*All*") %>% 
+  add_param("V_D76.V25", "*All*") %>% 
+  add_param("V_D76.V27", "") %>% 
+  add_param("V_D76.V4", "*All*") %>% 
+  add_param("V_D76.V5", "*All*") %>% 
+  add_param("V_D76.V51", "*All*") %>% 
+  add_param("V_D76.V52", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18") %>% 
+  add_param("V_D76.V6", "00") %>% 
+  add_param("V_D76.V7", "*All*") %>% 
+  add_param("V_D76.V8", "*All*") %>% 
+  add_param("V_D76.V9", "") %>% 
+  add_param("action-Send", "Send") %>% 
+  add_param("finder-stage-D76.V1", "codeset") %>% 
+  add_param("finder-stage-D76.V10", "codeset") %>% 
+  add_param("finder-stage-D76.V2", "codeset") %>% 
+  add_param("finder-stage-D76.V27", "codeset") %>% 
+  add_param("finder-stage-D76.V9", "codeset") %>% 
+  add_param("stage", "request") %>%  
+  make_query("D76") -> query_result
+
+
+
+xml_find_all(query_result, ".//response/data-table/r") %>% 
+  map_df(function(row) {
+    xml_find_all(row, ".//c") %>% 
+      xml_attrs() %>% 
+      as.list() %>% 
+      setNames(sprintf("V%d", 1:length(.))) %>% 
+      as.data.frame(stringsAsFactors=FALSE)
+  }) -> df
+
+
