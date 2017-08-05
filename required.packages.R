@@ -9,3 +9,4 @@ library(ggmap)
 library(maps) ##purrr map is masked 
 library(mapdata)
 library(ggrepel)
+library(rnoaa)
