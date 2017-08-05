@@ -74,13 +74,13 @@ fig.mean<-df.minT.FL.Jan.shapef%>%filter(Month=="Aug")%>%ggplot(.,aes(long,lat))
   #scale_fill_gradientn("Avg_Min_T_C_30yr", colors=c('blue', 'yellow', 'red'))#+
   #scale_fill_gradientn(colours=rev(brewer.pal(9,"Blues")))
   #geom_label_repel(data=cnames,aes(x=long,y=lat,label=subregion))+
-  viridis::scale_fill_viridis(option="plasma",direction=-1)
+  viridis::scale_fill_viridis(option="plasma",direction=-1)+
   theme(legend.position = c(0.25,0.5))
 
 fig.sd<-df.minT.FL.Jan.shapef%>%filter(Month=="Aug")%>%ggplot(.,aes(long,lat))+
   geom_polygon(aes(group=group,fill=sd_Max_T_C_30yr), color="white")+
   theme_bw()+
-  viridis::scale_fill_viridis(option="plasma",direction=-1)
+  viridis::scale_fill_viridis(option="plasma",direction=-1)+
   theme(legend.position = c(0.25,0.5))#+
 #geom_label_repel(data=cnames,aes(x=long,y=lat,label=subregion))
 

@@ -27,5 +27,14 @@ Objective of this repository is to explore spatial and temporal extent of temper
 ###Prerequisites 
 - You need a [web servies token](https://www.ncdc.noaa.gov/cdo-web/token) from NOAA in order to access bulk data 
 
+### Plots
 
+#### 30 year Average (1978-2011) January Minimum Temperature 
+![](Rplot_MAIN.jpeg)
+
+#### 30 year Average (1978-2011) January Maximum Temperature 
+![](Rplot_MAIN_jan_max.jpeg)
+
+#### 30 year Average (1978-2011) August Maximum Temperature 
+![](Rplot_MAIN_aug_max.jpeg)
 
