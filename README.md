@@ -26,5 +26,8 @@ Objective of this repository is to explore spatial and temporal extent of temper
 
 
 ### Map result 
-
+#### January Minimum Temperature  
 ![](Rplot_MAIN.jpeg)
+
+#### January Maximum Temperature 
+![](Rplot_MAIN_jan_max.jpeg)
