@@ -4,7 +4,9 @@ README
 Analysis of Temperature Datasets
 --------------------------------
 
-Objective of this repository is to explore spatial and temporal extent of temperature data, and to develop data science techniques to integrate environmental data into ecological studies.
+Objective of this repository is to explore spatial and temporal extent of temperature data, and to develop data science techniques to integrate environmental data into ecological studies. \#\#\#Sources
+
+-[CDC WONDER: Daily Air Temperatures and Heat Index](http://wonder.cdc.gov/nasa-nldas.html)
 
 ### Packages used in this study
 
