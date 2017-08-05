@@ -12,8 +12,10 @@ intprtr.county<-data.frame(subregion=counties%>%filter(region=="florida")%>%.[,"
 ##def merge FL county polygon with temperature data of January
 
 df.minT.FL.Jan<-df.T.FL%>%group_by(Month,County)%>%summarise(Avg_Min_T_C_30yr=mean(Avg_Min_T_C,na.rm=TRUE), 
-                                                             sd_Min_T_C_30yr=sd(Avg_Min_T_C,na.rm=TRUE)
-)%>%filter(Month=="Jan")
+                                                             sd_Min_T_C_30yr=sd(Avg_Min_T_C,na.rm=TRUE),
+                                                             Avg_Max_T_C_30yr=mean(Avg_Max_T_C,na.rm=TRUE), 
+                                                             sd_Max_T_C_30yr=sd(Avg_Max_T_C,na.rm=TRUE)
+                                                             )
 
 df.minT.FL.Jan.shapef<-counties%>%
   filter(region=="florida")%>%
@@ -27,12 +29,14 @@ fig.mean<-df.minT.FL.Jan.shapef%>%ggplot(.,aes(long,lat))+
   #scale_fill_gradientn("Avg_Min_T_C_30yr", colors=c('blue', 'yellow', 'red'))#+
   #scale_fill_gradientn(colours=rev(brewer.pal(9,"Blues")))
   #geom_label_repel(data=cnames,aes(x=long,y=lat,label=subregion))+
-  viridis::scale_fill_viridis()
+  viridis::scale_fill_viridis()+
+  theme(legend.position = c(0.25,0.5))
 
 fig.sd<-df.minT.FL.Jan.shapef%>%ggplot(.,aes(long,lat))+
   geom_polygon(aes(group=group,fill=sd_Min_T_C_30yr), color="white")+
   theme_bw()+
-  viridis::scale_fill_viridis()#+
+  viridis::scale_fill_viridis()+
+  theme(legend.position = c(0.25,0.5))#+
 #geom_label_repel(data=cnames,aes(x=long,y=lat,label=subregion))
 
 
