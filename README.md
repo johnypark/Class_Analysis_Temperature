@@ -23,3 +23,8 @@ Objective of this repository is to explore spatial and temporal extent of temper
 ### Prerequisites
 
 -   You need a [web servies token](https://www.ncdc.noaa.gov/cdo-web/token) from NOAA in order to access bulk data
+
+
+### Map result 
+
+![](Rplot_MAIN.jpeg)
