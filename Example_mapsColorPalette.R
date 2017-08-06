@@ -23,19 +23,27 @@ jajakflwr<-colorRampPalette(c("#3a0853",
 "#ba07bb",
 "#cccef7",
 "#917ed9"))
+
+honeyLavender<-colorRampPalette( c("#fed337",
+"#da9101",
+"#666103",
+"#7d488e",
+"#2a1227")
+  
+)
   
   
   
 
 #test
-filled.contour(volcano, color = greenhill, asp = 1, nlevels=100)
+filled.contour(volcano, color = honeyLavender, asp = 1, nlevels=100)
 
-ex.1<-df.minT.FL.Jan.shapef%>%filter(Month=="Aug")%>%ggplot(.,aes(long,lat))+
+ex.1<-df.minT.FL.Jan.shapef%>%filter(Month=="Jan")%>%ggplot(.,aes(long,lat))+
   geom_polygon(aes(group=group,fill=Avg_Max_T_C_30yr), color="white")+theme_bw()+
   #scale_fill_gradientn("Avg_Min_T_C_30yr", colors=c('blue', 'yellow', 'red'))#+
   #scale_fill_gradientn(colours=rev(brewer.pal(9,"Blues")))
   #geom_label_repel(data=cnames,aes(x=long,y=lat,label=subregion))+
-  scale_fill_gradientn(colors=jet.colors(20))+
+  scale_fill_gradientn(colors=honeyLavender(20))+
   theme(legend.position = c(0.25,0.5))+ggtitle("jet.colors")
 
 #same result
