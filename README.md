@@ -19,6 +19,7 @@ Objective of this repository is to explore spatial and temporal extent of temper
 
 -   `rnoaa` Link to [NOAA R package](https://ropensci.org/blog/2014/03/13/rnoaa/)
 -   [github repository](https://github.com/ropensci/rnoaa) for `rnoaa`
+-   [rnoaa tutorial](https://ropensci.org/tutorials/rnoaa_tutorial.html)
 -   `wondr` tool for working with CDC WONDER API in R
 -   [github repository](https://github.com/hrbrmstr/wondr) for `wondr`
 -   `maps` `dplyr` [`magrittr`](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) [`viridis`](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html)
